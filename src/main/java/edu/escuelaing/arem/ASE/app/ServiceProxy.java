@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import static spark.Spark.*;
 
 public class ServiceProxy {
-    private static String[] urlServices = {"http://ec2-44-211-150-196.compute-1.amazonaws.com:4567", "http://ec2-34-207-164-18.compute-1.amazonaws.com:4567"};
+    private static String[] urlServices = {"", ""};
     private static int service = 0;
     public static void main( String[] args )
     {
         staticFiles.location("/public");
         port(getPort());
+        urlServices[0] = args[0];
+        urlServices[1] = args[1];
 
         get("/factors", (req, res) -> {
             res.type("application/json");
