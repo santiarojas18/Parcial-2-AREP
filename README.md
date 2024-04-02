@@ -34,7 +34,7 @@
     ![img.png](img/img9.png)  
 * Y para indicar las URL se envian por parámetro al momento de ejecutar la aplicación, para setearlo se hace en el main:  
     ![img.png](img/img10.png)  
-* Y el algoritmo para roundrobin se hace ocn el método:  
+* Y el algoritmo para roundrobin se hace con el método:  
     ![img.png](img/img11.png)  
 * Además, para comunicar el Proxy con los dos servidores de MathServices se crea la clase HttpConnection y al recibir una petición se dirige esta al servidor definido según el algoritmo. El llamado se ve asi:  
     ![img.png](img/img12.png)  
