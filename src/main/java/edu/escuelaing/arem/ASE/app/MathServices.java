@@ -32,7 +32,7 @@ public class MathServices
             res.type("application/json");
             int n = Integer.parseInt(req.queryParams("value"));
             String result = "{\"operation\":\"primes\", \"input\":\"" + n + "\", \"output\":\"";
-            for (int i = 1; i < n; i++) {
+            for (int i = 1; i <= n; i++) {
                 if (factors(i).size() == 2) {
                     if (i != 2) {
                         result += ", " + i;
